@@ -1,0 +1,45 @@
+{% extends "bootstrap_responsive.html" %}
+
+
+{% block body_content %}
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container" id="header_container">
+          <a class="brand" href="#">Boring Friends</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="main_content" class="container">
+      <div class="hero-unit">
+        <h2>Login to Foursqurare to find your 'cool' friends!</h1>
+        <p id="foursquare_login_container"></p>
+      </div>
+
+    </div>
+    <div class="loader_wrapper">
+	<div class="loader_container">
+		  <div class='ring blue'></div>
+		  <div id="loader_text_container">
+		    <span>Thinking...</span>
+		  </div>
+	</div>
+    </div>
+   <script src='static/js/vendor/jquery/dist/jquery.js'></script>
+   <script src='static/js/vendor/underscore/underscore.js'></script>
+   <script src='static/js/vendor/inflection/inflection.min.js'></script>
+   <script src='static/js/vendor/classify/dist/classify.js'></script>
+   <script src='static/js/vendor/marelle.js'></script>
+   <script src='static/js/vendor/backbone/backbone.js'></script>
+   <script src='static/js/vendor/marionette/lib/backbone.marionette.js'></script>
+   <script src='static/js/backbone/boring_friends_app.js'></script>
+   <script type="text/javascript">
+    $(function(){
+      BoringFriend.start();
+    });
+   </script>
+{% endblock %}
+
+
+
+

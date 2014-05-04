@@ -1,0 +1,35 @@
+{
+  "name": "classify",
+  "version": "0.14.0",
+  "main": "./dist/classify.min.js",
+  "devDependencies": {
+    "qunit": "~1.14.0",
+    "benchmark": "~1.0.0"
+  },
+  "ignore": [
+    "**/.*",
+    ".*",
+    "coverage",
+    "docs",
+    "node_modules",
+    "perf",
+    "src",
+    "srcwrap",
+    "test",
+    "vendor",
+    "Gruntfile.js",
+    "package.json",
+    "bower.json"
+  ],
+  "homepage": "https://github.com/weikinhuang/Classify",
+  "_release": "0.14.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.14.0",
+    "commit": "5d9723730416bf13d3c2ebcd8588bd3c319dd53b"
+  },
+  "_source": "git://github.com/weikinhuang/Classify.git",
+  "_target": "~0.14.0",
+  "_originalSource": "classify",
+  "_direct": true
+}

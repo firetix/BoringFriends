@@ -1,0 +1,33 @@
+{% extends "bootstrap_responsive.html" %}
+
+
+{% block body_content %}
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container" id="header_container">
+          <a class="brand" href="#">Boring Friends</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="main_content" class="container">
+      <div class="hero-unit">
+        <h2>Login to Foursqurare to find your 'cool' friends!</h1>
+        <p id="foursquare_login_container"></p>
+      </div>
+
+    </div>
+   <script src='static/js/vendor/jquery/dist/jquery.js'></script>
+   <script src='static/js/vendor/inflection/inflection.min.js'></script>
+   <script src='static/js/vendor/classify/dist/classify.js'></script>
+   <script src='static/js/vendor/marelle.js'></script>
+   <script type="text/javascript">
+    $(function(){
+             // Supply your foursquare client id
+        var FSQUARE_CLIENT_ID = 'OIHK2AIH43GOZWFR4EHQRQV3QEXJWZSUBPJ2WADXFBINMRWC';
+        var M = $.Marelle(FSQUARE_CLIENT_ID).done(function(M) {
+            M.signinButton("#foursquare_login_container");
+        });
+    });
+   </script>
+{% endblock %}
