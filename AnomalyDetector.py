@@ -8,14 +8,15 @@ import foursquare
 class FourSquareAnomalyDetector():
     def __init__(self, token):
         self.token = token
-        self.run()
         self.client = foursquare.Foursquare(access_token=self.token)
+        self.run()
+
 
     def run(self):
         foursquareself = self.client.users()
         self.friend_checkins = []
-        for friend_id in self.client.users.friends():
-            self.friend_checkins.append(self.return_checkins(friend_id))
+        for friend in self.client.users.friends():
+            self.friend_checkins.append(self.return_checkins(friend))
         print self.friend_checkins
 
     def return_checkins(self, id):
@@ -23,6 +24,7 @@ class FourSquareAnomalyDetector():
         for checkin in self.client.users.all_checkins(id):
             self.checkins.append(checkin)
         return self.checkins
+
 
 
 
@@ -36,6 +38,6 @@ class FourSquareAnomalyDetector():
 #            i = i + 1
 #        return (result.inferences['anomalyScore'])
 
-foursq=FourSquareAnomalyDetector(token)
+foursq=FourSquareAnomalyDetector('5ISV1HHDSEFX44Y4H34GYC55020Q3HST55EUL2BDDNIFXKCV')
 
 
